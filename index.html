@@ -60,16 +60,25 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <div class="overlay">
-          <div class="image"><img src="assets/stayingin.png"></div>
-          <!-- <div class="image"><img src="assets/letsgoout.png"></div> -->
+          <div class="image" onclick="playAudio()">
+            <img src="assets/stayingin.png">
+            <!-- <img src="assets/letsgoout.png"> -->
+          </div>
         </div>
-
-        <audio controls autoplay>
+  
+        <audio id="audioPlayer" controls>
           <source src="assets/stayingin.mp3" type="audio/mp3">
-          <!-- <source src="assets/letsgoout.mp3" type="audio/mp3"> -->
         </audio>
 
       </section>
     </div>
+
+    <script>
+      function playAudio() {
+        var audio = document.getElementById('audioPlayer');
+        audio.play();
+      }
+    </script>
+    
   </body>
 </html>
