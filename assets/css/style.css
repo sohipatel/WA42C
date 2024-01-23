@@ -29,6 +29,10 @@ svg {
 	height: 100vh;
 }
 
+audio {
+	display: none;
+}
+
 .image {
 	position: relative;
 	z-index: 1;
