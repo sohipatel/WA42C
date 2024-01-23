@@ -33,16 +33,13 @@ audio {
 	display: none;
 }
 
-.image {
+.image.dance {
 	position: relative;
 	z-index: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-}
-
-.image.dance {
 	animation: diagonalJive is ease-in-out infinite;
 }
 
@@ -64,7 +61,7 @@ audio {
 	}
 }
 
-.image img {
+.image.dance img {
 	max-width: 100%;
 	max-height: 100%;
 	display: block;
