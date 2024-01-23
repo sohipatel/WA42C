@@ -60,8 +60,8 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <div class="overlay">
-          <div class="image" onclick="playAudio()">
-            <img src="assets/stayingin.png">
+          <div class="image" onclick="toggleDance()">
+            <img src="assets/stayingin.png" id="dancingImage">
             <!-- <img src="assets/letsgoout.png"> -->
           </div>
         </div>
@@ -74,9 +74,17 @@
     </div>
 
     <script>
-      function playAudio() {
+      function toggleDance() {
         var audio = document.getElementById('audioPlayer');
-        audio.play();
+        var image = document.getElementById('dancingImage');
+
+        if (audio.paused) {
+          audio.play();
+          image.classList.add('dance');
+        } else {
+          audio.pause();
+          image.classList.remove('dance');
+        }
       }
     </script>
     
